@@ -1,0 +1,124 @@
+.testimonial-section {
+  padding: 8em 0;
+  background-color: #f7f7f7;
+
+  .title {
+    text-align: center;
+
+    span {
+      font-size: 13px;
+      display: block;
+      margin-bottom: 8px;
+      color: rgba(0, 0, 0, 0.3);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 38px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .tns-nav-active {
+      background-color: #cf7500;
+    }
+
+    div {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: rgba(128, 128, 128, 0.377);
+    }
+  }
+
+  .testimonial {
+    &:active {
+      cursor: grabbing;
+    }
+
+    .review-container {
+      display: block;
+      position: relative;
+      background: white;
+      padding: 30px;
+      margin: 35px 0;
+      border-radius: 4px;
+
+      .icon {
+        position: absolute;
+        top: -20px;
+        left: 30px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #cf7500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+
+      p {
+        font-size: 16px;
+        color: #808080;
+        margin-bottom: 24px;
+        line-height: 28.8px;
+      }
+
+      .review {
+        .review-img {
+          width: 80px;
+
+          img {
+            max-width: 100%;
+            border-radius: 50%;
+          }
+        }
+
+        .review-text {
+          h6 {
+            font-size: 20px;
+            color: #cf7500;
+            line-height: 36px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Tiny Slider Active
+
+.testimonial-section {
+  .tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active {
+    .review-container {
+      background: #cf7500;
+      color: #fff;
+
+      p {
+        color: #fff;
+      }
+
+      .icon {
+        background: #fff;
+        color: #cf7500;
+      }
+
+      .review-text {
+        h6 {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

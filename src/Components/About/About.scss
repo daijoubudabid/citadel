@@ -1,0 +1,117 @@
+.about-section {
+  background-color: #ebebeb;
+  padding: 8em 0;
+  position: relative;
+  background: url(/bg_4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 0;
+
+  @media (max-width: 575px) {
+    padding: 6em 0;
+  }
+
+  @media (max-width: 768px) {
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.336);
+      z-index: -1;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .text-area {
+    span {
+      font-size: 13px;
+      display: block;
+      margin-bottom: 8px;
+      color: rgba(0, 0, 0, 0.3);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      @media (max-width: 768px) {
+        color: white;
+      }
+    }
+
+    h2 {
+      font-size: 38px;
+      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 40px;
+        color: #fff;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      font-weight: 400;
+      color: gray;
+
+      @media (max-width: 768px) {
+        color: white;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        width: 80px;
+        height: 80px;
+        background: #cf7500;
+        border-radius: 50%;
+        position: relative;
+        animation: pulse 2s infinite;
+
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          color: #fff;
+        }
+      }
+
+      .text {
+        h6 {
+          color: #cf7500;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(207, 117, 0, 0.1);
+    -webkit-box-shadow: 0 0 0 0 rgba(207, 117, 0, 0.4);
+    box-shadow: 0 0 0 0 rgba(207, 117, 0, 0.4);
+  }
+
+  70% {
+    -moz-box-shadow: 0 0 0 30px rgba(207, 117, 0, 0);
+    -webkit-box-shadow: 0 0 0 30px rgba(207, 117, 0, 0);
+    box-shadow: 0 0 0 30px rgba(207, 117, 0, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(207, 117, 0, 0);
+    -webkit-box-shadow: 0 0 0 0 rgba(207, 117, 0, 0);
+    box-shadow: 0 0 0 0 rgba(207, 117, 0, 0);
+  }
+}

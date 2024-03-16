@@ -1,0 +1,78 @@
+@import "../../sass/variables";
+
+.hero-section {
+  height: 100vh;
+  min-height: 100%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 0;
+  background: #d4eaf5;
+
+  .text-area {
+    height: 100svh;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      font-weight: 200;
+      font-size: 45px;
+      line-height: 1.2;
+
+      span {
+        color: #052c43;
+        font-weight: 700;
+        display: block;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 40px;
+      }
+    }
+
+    p {
+      color: rgba(0, 0, 0, 0.4);
+      line-height: 28.8px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: white;
+      border: none;
+      border: 1px solid white;
+      padding: 16px 24px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 1px;
+      line-height: 20px;
+      color: #267aa4;
+    }
+  }
+
+  .image-area {
+    background: url(/hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100svh;
+    min-height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+
+    @media (max-width: 767px) {
+      width: 60%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    margin-top: 70px;
+  }
+}
